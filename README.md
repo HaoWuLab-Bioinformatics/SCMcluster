@@ -12,5 +12,10 @@ The file SOM_CLUST.py contains SOM algorithm. You can use this method by:
 The file SNN_cliq.py contains SNN_cliq algorithm. You can use this method by:
 
 ## Dependency
+python 3.6
+numpy 1.19
+scikit-learn 0.24
+pandas 0.23
+tensorflow 1.12
 
 ## Usage
