@@ -23,7 +23,7 @@ pandas 0.23
 tensorflow 1.12 
 
 ## Usage
-Enter the normalized expression matrix into feature_selection.py.You need to enter the matrix path in the following statement: 
+Enter the normalized expression matrix into feature_selection.py. You need to enter the matrix path in the following statement: 
 
 ` df=pd.read_csv('./yourpath',index_col=0,sep='\t') `    
 
