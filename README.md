@@ -22,3 +22,8 @@ pandas 0.23
 tensorflow 1.12 
 
 ## Usage
+Enter the normalized expression matrix into feature_selection.py.You need to enter the matrix path as the following statement: 
+
+`df=pd.read_csv('./yourpath',index_col=0,sep='\t')
+
+When using SCMcluster.py, you need to input the matrix path after feature extraction. Enter the same as above. At the same time, you need to enter the number of clusters to be clustered according to the prompts.
