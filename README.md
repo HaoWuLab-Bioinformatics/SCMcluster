@@ -31,6 +31,6 @@ Use the following statement for feature extraction：
 
 ` python featrue_selection.py `
 
-When using SCMcluster.py, you need to input the matrix path after feature extraction. Enter the path of your data as above. At the same time, you need to enter the number of clusters according to the prompts.Use the following statement for ensemble clustering：
+When using SCMcluster.py, you need to input the matrix path after feature extraction. Enter the path of your data as above. At the same time, you need to enter the number of clusters according to the prompts. Use the following statement for ensemble clustering：
 
 ` python SCMcluster.py `
