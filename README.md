@@ -26,4 +26,4 @@ Enter the normalized expression matrix into feature_selection.py.You need to ent
 
 ` df=pd.read_csv('./yourpath',index_col=0,sep='\t') `
 
-When using SCMcluster.py, you need to input the matrix path after feature extraction. Enter the same as above. At the same time, you need to enter the number of clusters to be clustered according to the prompts.
+When using SCMcluster.py, you need to input the matrix path after feature extraction. Enter the path of your data as above. At the same time, you need to enter the number of clusters to be clustered according to the prompts.
