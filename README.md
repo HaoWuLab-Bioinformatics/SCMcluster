@@ -10,3 +10,7 @@ The file SOM_CLUST.py contains SOM algorithm. You can use this method by:
 ` SOM_CLUST.CyrusSOM() `
 
 The file SNN_cliq.py contains SNN_cliq algorithm. You can use this method by:
+
+## Dependency
+
+## Usage
