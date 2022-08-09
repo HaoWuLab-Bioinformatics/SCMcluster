@@ -6,4 +6,4 @@ This algorithm integrates two cell marker databases(CellMarker database and Pang
 
 ## Overview
 The file SOM_CLUST.py contains SOM algorithm. You can use this method by:
-'SOM_CLUST.CyrusSOM()'
+' SOM_CLUST.CyrusSOM() '
