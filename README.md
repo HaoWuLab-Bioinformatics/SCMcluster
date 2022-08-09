@@ -5,5 +5,8 @@ SCMcluster is an ensemble clustering algorithm for single-cell RNA sequencing da
 This algorithm integrates two cell marker databases(CellMarker database and PanglaoDB database)with scRNA-seq data for feature extraction, and constructs an ensemble clustering model(including SNN-Cliq and SOM) based on the consensus matrix.
 
 ## Overview
-The file SOM_CLUST.py contains SOM algorithm. You can use this method by:\\
+The file SOM_CLUST.py contains SOM algorithm. You can use this method by:
+
 ` SOM_CLUST.CyrusSOM() `
+
+The file SNN_cliq.py contains SNN_cliq algorithm. You can use this method by:
