@@ -13,7 +13,7 @@ The feature_selection.py file is used to integrate marker genes for feature extr
 The SCMcluster.py file is used to perform ensemble clustering. This method needs to input the expression matrix after feature selection.         
 The lable_transform.py file is used for label transformation of the reference dataset. This method converts the label file into a label list to calculate the accuracy.
 
-Before using feature_selection.py, you must import SOM_CLUST.py and SNN_Cliq.py. If you want to calculate the clustering accuracy, you have to hold the reference labels and transform them using lable_transform.py.
+Before using feature_selection.py, you must import SOM_CLUST.py and SNN_Cliq.py.  If you want to calculate the clustering accuracy, you have to hold the reference labels and transform them using lable_transform.py.
 
 ## Dependency
 python 3.6    
