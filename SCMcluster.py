@@ -38,20 +38,20 @@ def co_clust(dmat,data,n_clusters):
     if est==SNN_Cliq:
         print("snn")
         labels=SNN_Cliq.snn_cliq(dmat, 0.5, 0.7,15)
-        print(len(labels))
-        ari = metrics.adjusted_rand_score(lable_transform.lable, labels)
-        NMI = metrics.adjusted_mutual_info_score(lable_transform.lable, labels)
-        print('ari:', ari)
-        print('NMI:', NMI)
+#         print(len(labels))
+#         ari = metrics.adjusted_rand_score(lable_transform.lable, labels)
+#         NMI = metrics.adjusted_mutual_info_score(lable_transform.lable, labels)
+#         print('ari:', ari)
+#         print('NMI:', NMI)
 
     else:
       print("other")
       labels =est.transform_fit(data)
-      print(len(labels))
-      ari = metrics.adjusted_rand_score(lable_transform.lable, labels)
-      NMI = metrics.adjusted_mutual_info_score(lable_transform.lable, labels)
-      print('ari:', ari)
-      print('NMI:', NMI)
+#       print(len(labels))
+#       ari = metrics.adjusted_rand_score(lable_transform.lable, labels)
+#       NMI = metrics.adjusted_mutual_info_score(lable_transform.lable, labels)
+#       print('ari:', ari)
+#       print('NMI:', NMI)
 
     #find all associations and transform it into a numpy array
     res = [[int(i == j) for i in labels] for j in labels]
@@ -79,22 +79,22 @@ if __name__ == "__main__":
  print(co.shape)
  pre_labels = list(SpectralClustering(n_clusters=int(n_clusters), affinity='precomputed', assign_labels='discretize').fit_predict(
          co))  # 获取聚类标签 discretize/kmeans,‘nearest_neighbors
- print(len(pre_labels))
+ print(pre_labels)
+ 
+#  lable_transform
 
- lable_transform
+#  AMI = metrics.adjusted_mutual_info_score(lable_transform.lable, pre_labels)
 
- AMI = metrics.adjusted_mutual_info_score(lable_transform.lable, pre_labels)
+#  ari=metrics.adjusted_rand_score(lable_transform.lable, pre_labels)
 
- ari=metrics.adjusted_rand_score(lable_transform.lable, pre_labels)
+#  print('ari:', ari)
 
- print('ari:', ari)
+#  NMI=metrics.normalized_mutual_info_score(lable_transform.lable, pre_labels)
+#  print('NMI:', NMI)
+#  print('AMI:', AMI)
 
- NMI=metrics.normalized_mutual_info_score(lable_transform.lable, pre_labels)
- print('NMI:', NMI)
- print('AMI:', AMI)
+#  RI=metrics.adjusted_rand_score(lable_transform.lable, pre_labels)
+#  print('RI:', RI)
 
- RI=metrics.adjusted_rand_score(lable_transform.lable, pre_labels)
- print('RI:', RI)
-
- FMI=metrics.fowlkes_mallows_score(lable_transform.lable, pre_labels)
- print('FMI:', FMI)
+#  FMI=metrics.fowlkes_mallows_score(lable_transform.lable, pre_labels)
+#  print('FMI:', FMI)
