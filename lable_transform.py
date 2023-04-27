@@ -2,6 +2,7 @@ from sklearn import metrics
 import numpy as np
 import pandas as pd
 import tensorflow as tf
+
 def one_hot_matrix(labels, C):
     # input -- labels (true labels of the sets), C (# types)
     # output -- one hot matrix with shape (# types, # samples)
@@ -30,15 +31,15 @@ def convert_type_to_label(types, type_to_label_dict):#将细胞对应的lable生
         labels.append(type_to_label_dict[type])
     return labels
 
-lable=pd.read_csv('./data/baron_lables.txt',index_col=0, sep='\t')
+lable=pd.read_csv('data/baron/baron_lables.txt',index_col=0, sep='\t')
 # lable=pd.read_csv('./data/camp1_label.txt',index_col=0,sep='\t')
-print(lable.iloc[:,0])
-print(lable)
+#print(lable.iloc[:,0])
+#print(lable)
 nt = len(set(lable.iloc[:, 0]))
 type_to_label_dict = type_to_label_dict(lable.iloc[:, 0])
-print(type_to_label_dict)
+#print(type_to_label_dict)
 label_to_type_dict = {v: k for k, v in type_to_label_dict.items()}
-print(label_to_type_dict)
+#print(label_to_type_dict)
 lable = convert_type_to_label(lable.iloc[:, 0], type_to_label_dict)
-print(len(lable))
-print(lable)
+#print(len(lable))
+#print(lable)
