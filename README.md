@@ -15,7 +15,7 @@ The lable_transform.py file is used for label transformation of the reference da
 
 ## Installation 
 
-pip -r requirements.txt
+pip install -r requirements.txt
 
 ## Usage
 
