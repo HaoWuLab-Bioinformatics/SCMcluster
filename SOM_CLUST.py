@@ -59,7 +59,10 @@ class CyrusSOM(object):
     def standard_w(self,w):
         for i in range(w.shape[0]):
             for j in range(w.shape[1]):
-                w[i,j,:] = [value/(((w[i,j,:])**2).sum()**0.5) for value in w[i,j,:]]
+                if (((w[i,j,:])**2).sum()**0.5) == 0:
+                    w[i, j, :] = 0
+                else:
+                    w[i,j,:] = [value/(((w[i,j,:])**2).sum()**0.5) for value in w[i,j,:]]
         return w
     def cal_similar(self,x,w):
         similar = (x*w).sum(axis=2)

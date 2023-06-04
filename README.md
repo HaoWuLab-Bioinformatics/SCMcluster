@@ -13,24 +13,18 @@ The feature_selection.py file is used to integrate marker genes with scRNA-seq f
 The SCMcluster.py file is used to perform ensemble clustering. This method needs to input the expression matrix after feature selection.         
 The lable_transform.py file is used for label transformation of the reference dataset. This method converts the label file into a label list to calculate the accuracy.
 
-Before using SCMcluster.py, you must import SOM_CLUST.py and SNN_Cliq.py.  If you want to calculate the clustering accuracy, you have to hold the reference labels and transform them using lable_transform.py.
+## Installation 
 
-## Dependency
-python 3.6    
-numpy 1.19  
-scikit-learn 0.24   
-pandas 0.23   
-tensorflow 1.12 
+pip install -r requirements.txt
 
 ## Usage
-Enter the normalized expression matrix into feature_selection.py. You need to enter the matrix path in the following statement: 
 
-` df=pd.read_csv('./yourpath',index_col=0,sep='\t') `    
+Use the following command for feature extraction：    
 
-Use the following statement for feature extraction：    
+` python -i feature_selection.py -i path_to_input_matrix -o path_to_output_matrix -m path_to_markers `    
 
-` python featrue_selection.py `
+Use the following command for ensemble clustering
 
-When using SCMcluster.py, you need to input the matrix path after feature extraction. Enter the path of your data as above. At the same time, you need to enter the number of clusters according to the prompts. Use the following statement for ensemble clustering：
+` python -i SCMcluster.py -m path_to_input_matrix -o path_to_output_file -k number_of_clusters `
 
-` python SCMcluster.py `
+If you want to skip the feature extraction part you can directly run the ensemble clustering command for your input data.
